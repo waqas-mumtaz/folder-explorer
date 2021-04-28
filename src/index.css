@@ -1,13 +1,111 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+}
+.folder-tree-wrapper {
+  background-color: #fff;
+  max-width: 600px;
+  min-height: 260px;
+  padding: 20px;
+  margin: 35px auto;
+  border-radius: 10px;
+  box-shadow: 1px 10px 10px 0 rgb(0 0 0 / 5%);
+}
+.folder-tree {
+  list-style: none;
+  cursor: pointer;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+.folder-tree li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  transition: all 0.4s ease;
+  position: relative;
+}
+.folder-tree li > div {
+  display: inline-block;
+  padding-left: 5px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.folder-tree li:hover {
+}
+.folder-tree li .fa-folder {
+  color: rgb(242, 176, 53);
+}
+
+.folder-tree li .fa-folder-open {
+  color: rgb(187, 133, 32);
+}
+
+.folder-tree li ul {
+  padding-left: 10px;
+  margin: 0;
+  padding-top: 8px;
+}
+.folder-tree ul {
+  display: none;
+  position: relative;
+}
+.folder-tree ul:before {
+  position: absolute;
+  content: '';
+  left: -10px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: transparent;
+  border-left: dashed 1px #c2c2c2;
+  border-bottom: dashed 1px #c2c2c2;
+}
+.folder-tree li ul li {
+  display: block;
+  margin-bottom: 8px;
+}
+.folder-tree .arrow {
+  position: absolute;
+  top: 5px;
+  left: -18px;
+  width: 8px;
+  height: 8px;
+  transition: all 0.4s ease;
+  transform: rotate(-90deg);
+}
+.folder-tree .arrow .fa-arrow-down {
+  color: #595959;
+  transition: all 0.4s ease;
+}
+.folder-tree .arrow:hover .fa-arrow-down {
+  color: #292929;
+}
+.folder-tree li.expanded > ul {
+  display: block;
+}
+.folder-tree li.expanded > div > .arrow {
+  transform: rotate(0deg);
+}
+
+.add-item {
+  border: none;
+  background: #e0e0e0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+.plus-btn {
+  background: #e4e4e4;
+  padding: 0 4px;
+  font-size: 11px;
+  border-radius: 50%;
+  margin-left: 5px;
 }

@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "name": "item1"
+  },
+  {
+    "id": 2,
+    "name": "item2",
+    "isOpen": false,
+    "children": [
+      {
+        "id": 3,
+        "name": "2-item1",
+        "isOpen": false
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "item3",
+    "isOpen": false,
+    "children": [
+      {
+        "id": 5,
+        "name": "3-item1"
+      },
+      {
+        "id": 6,
+        "name": "3-item2",
+        "isOpen": false,
+        "children": [
+          { "id": 7, 
+            "name": "3.2-item 1" 
+            }
+          ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "item4",
+    "isOpen": false,
+    "children": [
+      {
+        "id": 9,
+        "name": "4-item1"
+      },
+      {
+        "id": 10,
+        "name": "4-item2",
+        "isOpen": false,
+        "children": [
+          { "id": 11,
+            "name": "4.2-item 1" 
+            }
+          ]
+      }
+    ]
+  }
+]
