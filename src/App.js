@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TreeList from './components/TreeList';
+import SortItem from './components/SortItem';
 
 const baseTree = require('./data.json');
 
@@ -34,16 +35,19 @@ function App() {
     setTree(newTree);
   };
 
+  const updateTree = (newTree) => setTree(newTree);
   const funcs = {
     toggleOpen,
     addChild,
+    updateTree,
   };
 
   return (
     <div className="folder-tree-wrapper">
       <h1>Folder Explorer</h1>
+      <SortItem tree={tree} funcs={funcs} />
       <TreeList tree={tree} funcs={funcs} />
-      <button onClick={() => addChild()} className="add-item">
+      <button onClick={() => addChild()} className="btn-primary">
         Add Folder
       </button>
     </div>
