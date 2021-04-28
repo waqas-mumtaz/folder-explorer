@@ -93,13 +93,15 @@ body {
   transform: rotate(0deg);
 }
 
-.add-item {
+.btn-primary {
   border: none;
   background: #e0e0e0;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 12px;
   margin-left: 20px;
+  color: #636363;
+  text-decoration: none;
 }
 
 .plus-btn {
